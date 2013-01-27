@@ -1,0 +1,64 @@
+#edit-slug-box,
+#nivo_type_category,
+#nivoslider_upload_box,
+#minor-publishing {
+    display:none;
+}
+
+.nivoslider-thumbs {
+    list-style:none;
+    padding:3px 0 0 0;
+    margin:0;
+}
+.nivoslider-thumbs li {
+    display:inline-block;
+    position:relative;
+    margin:0;
+}
+.nivoslider-thumbs li img {
+    margin:0 10px 5px 0;
+    background:#fff;
+    border:1px solid #DFDFDF;
+    padding:2px;
+}
+
+#nivoslider-images {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+#nivoslider-images li {
+    display:inline-block;
+    position:relative;
+    margin:0;
+}
+#nivoslider-images li img {
+    margin:0 10px 10px 0;
+    background:#fff;
+    border:1px solid #DFDFDF;
+    padding:3px;
+}
+#nivoslider-images li a.remove-image {
+    display:block;
+    width:16px;
+    height:16px;
+    background:url(../images/close_16.png) no-repeat;
+    text-indent:-9999px;
+    position:absolute;
+    bottom:16px;
+    right:13px;
+    z-index:10;
+}
+
+.qq-upload-drop-area {
+    position:relative !important;
+    margin-bottom:10px;
+}
+.qq-upload-button {
+    margin-top:5px;
+}
+.qq-upload-list {
+    list-style:none;
+    padding:0;
+    margin:1em;
+}

@@ -1,0 +1,240 @@
+/*
+Skin Name: Creativity Included 
+Skin URI: http://www.creativityincluded.com/
+Skin Type: flexible
+Description: Customization for Creativity Included.
+Version: 1.0
+Author: Chris Ford
+Author URI: http://www.creativityincluded.com.com/
+*/
+
+/*
+ * The SlideDeck slide area.
+ * 
+ * You can specify a height for the slide area, but it is not required, width
+ * will automatically be defined for the slide area and will vary depending on
+ * how many slides you have in your SlideDeck.
+ * 
+ * To add space between a slide and the next slide's spine (slide title bar),
+ * increase the border-right definition. To remove the space, just remove the
+ * border definition.
+ * 
+ * SlideDeck slides are all given a unique class, so you can customize the
+ * appearance of each slide individually by referencing a slide by its
+ * numbered class name. For example:
+ *    .slidedeck dd.slide_1
+ *    .slidedeck dd.slide_2
+ *    .slidedeck dd.slide_3
+ *    etc...
+ */
+.skin-ci dl.slidedeck > dd {
+    position: relative;
+    height: 274px;
+    padding: 0;
+    margin: 0;
+    background: url('slides.png') no-repeat 0 0;    /* Note: you should position the background with pixel measurements in IE7 as it improperly calculates the height of the DD element when containing vertical slides */
+    overflow: hidden;
+}
+
+/*
+ * The SlideDeck "active corner".
+ * 
+ * This is the small triangle that appears in the upper left of the active
+ * slide. This can be made any size and positioned differently by modifying
+ * the margin values. By default the left margin is inset to prevent any
+ * gap from appearing as the SlideDeck animates.
+ */
+.skin-ci dl.slidedeck .activeCorner {
+    margin-left: -6px;
+    background-image: url('corner.png');
+    width: 12px;
+    height: 25px;
+}
+
+/*
+ * The SlideDeck vertical slide style.
+ * 
+ * Veritcal slides will take over the entire content area of a horizontal slide
+ * automatically. Padding will automatically be accommodated for. You can also
+ * eliminate the padding definition to have your vertical slide content line
+ * up flush against the containing slide content area edges.
+ */
+.skin-ci dl.slidedeck dd.slide ul.slidesVertical,
+.skin-ci dl.slidedeck dd.slide dl.slidesVertical {
+	margin:0;
+	padding:0;
+}
+.skin-ci dl.slidedeck dd.slide ul.slidesVertical > li,
+.skin-ci dl.slidedeck dd.slide dl.slidesVertical > dd {
+    overflow: hidden;
+    padding: 0;
+}
+
+/*
+ * The SlideDeck vertical slide navigation container.
+ * 
+ * This is the container for the vertical slide navigation. You can position
+ * this anywhere you want within the containing slide's area. If you try to
+ * position it outside of the slide area it will not appear.
+ */
+.skin-ci dl.slidedeck dd.slide ul.verticalSlideNav {
+    top: 10px;
+    right: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*
+ * The SlideDeck vertical slide navigation link containers.
+ * 
+ * This is the container for a navigation link in the vertical slide navigation
+ * element. You can adjust the width and height of this element to accommodate
+ * for a larger vertical navigation button.
+ * 
+ * To increase the space between vertical navigation links, increase the bottom
+ * and/or top padding of this element.
+
+.skin-ci dl.slidedeck dd.slide ul.verticalSlideNav li {
+	display: none;
+}
+ */
+/*
+ * The SlideDeck vertical slide position indicator.
+ * 
+ * This is the element that slides behind the default navigation link list to
+ * show which is the current vertical slide being viewed. This should be given
+ * similar dimensions to the vertical slide navigation links.
+ 
+.skin-ci dl.slidedeck dd.slide ul.verticalSlideNav li.arrow {
+	display: none;
+}
+*/
+/*
+ * The SlideDeck veritcal slide navigation links.
+ * 
+ * These are the vertical slide navigation links. By default these are a small
+ * square that uses a sprite background image replacement method to hide the
+ * default text that is placed in the link ("Nav 1", "Nav 2", "Nav 3").
+ * 
+ * To change the appearance of the navigation elements, you will need to use a
+ * background image replacement as the text for the links cannot be changed.
+ * Each vertical slide navigation link is given a unique class so they can be
+ * styled individually. For example:
+ *     dl.slidedeck dd.slide ul.verticalSlideNav li a.nav_1
+ *     dl.slidedeck dd.slide ul.verticalSlideNav li a.nav_2
+ *     dl.slidedeck dd.slide ul.verticalSlideNav li a.nav_3
+ *     etc....
+ */
+.skin-ci dl.slidedeck dd.slide ul.verticalSlideNav li a,
+.skin-ci dl.slidedeck dd.slide ul.verticalSlideNav li a:link,
+.skin-ci dl.slidedeck dd.slide ul.verticalSlideNav li a:visited {
+    border: 0;
+    outline: none;
+    position: relative;
+    display: block;
+    width: 10px;
+    height: 0;
+    overflow: hidden;
+    padding-top: 10px;
+    background: #fff;
+    outline: none;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    -webkit-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    -ms-filter: "Alpha(opacity=50)";
+    filter: Alpha(opacity=50);
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+/*
+ * The SlideDeck vertical slide navigation link hover state.
+ */
+.skin-ci dl.slidedeck dd.slide ul.verticalSlideNav li a:hover {
+    opacity: 0.75;
+    -moz-opacity: 0.75;
+    -webkit-opacity: 0.75;
+    -khtml-opacity: 0.75;
+    -ms-filter: "Alpha(opacity=75)";
+    filter: Alpha(opacity=75); 
+}
+
+
+/*
+ * The SlideDeck vertical slide position indicator.
+ * 
+ * This is the element that slides behind the default navigation link list to
+ * show which is the current vertical slide being viewed. This should be given
+ * similar dimensions to the vertical slide navigation links.
+ * 
+ * NOTE: This element is not used in this skin, so it is hidden
+ 
+.skin-ci dl.slidedeck dd.slide ul.verticalSlideNav li.arrow { display: none; }*/
+.skin-ci dl.slidedeck ul.verticalSlideNav li a {
+    position: relative;
+    display: block;
+    padding: 12px 0 0 0;
+    margin: 0;
+    width: 25px;
+    height: 0;
+    overflow: hidden;
+    line-height: 12px;
+    background: url('vertical-nav.png') 0 0 no-repeat;
+}
+/* Vertical slide navigation style for the currently active vertical slide navigation link */
+.skin-ci dl.slidedeck ul.verticalSlideNav li.active a {
+    background-position: 0 -24px;
+}
+/* Vertical slide navigation link style when the parent horizontal slide is active */
+.skin-ci dl.slidedeck dt.active ul.verticalSlideNav li.active a {
+    background-position: 0 -12px;
+}
+
+/**
+ * BEGIN : Vertical slide previous/next button styling.
+ */
+.skin-ci dl.slidedeck a.vertical-prev-next {
+    border: 0;
+    outline: none;
+    position: absolute;
+    /*display: none*/;
+    z-index: 20000;
+    width: 27px;
+    height: 0;
+    padding: 27px 0 0;
+    overflow: hidden;
+    line-height: 27px;
+    cursor: pointer;
+    left: 50%;
+    margin: 0 0 0 -13px;
+    background: url('vertical-prev-next.png');
+}
+.skin-ci dl.slidedeck dd.slide:hover a.vertical-prev-next { display: block; }
+.skin-ci dl.slidedeck a.vertical-prev-next.next {
+    bottom: 6px;
+    background-position: -27px 0;
+}
+.skin-ci dl.slidedeck a.vertical-prev-next.previous {
+    top: 6px;
+    background-position: 0 0;
+}
+.skin-ci dl.slidedeck li.case a.next { bottom: 31px; }
+.skin-ci dl.slidedeck a.next:hover {
+    background-position: -27px -27px;
+}
+.skin-ci dl.slidedeck a.previous:hover {
+    background-position: 0 -27px;
+}
+.skin-ci dl.slidedeck:hover a.vertical-nav {
+    display: block;
+}
+/**
+ * END : Vertical slide previous/next button styling.
+ */
